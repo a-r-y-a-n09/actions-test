@@ -1,0 +1,16 @@
+name: Hello World Action  # Overall workflow name (shows in Actions tab)
+
+on: [push]  # Triggers on every push to any branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Uses GitHub's free Linux virtual machine (runner)
+    steps:
+      - name: Checkout code  # Step 1: Grabs your repo files
+        uses: actions/checkout@v4
+      
+      - name: 24f2006109@ds.study.iitm.ac.in  # REQUIRED: Your email in the name
+        run: echo "Hello from Aryan! Action triggered successfully."  # Simple command
+        
+      - name: List files  # Bonus step: Shows what the runner sees
+        run: ls -la
